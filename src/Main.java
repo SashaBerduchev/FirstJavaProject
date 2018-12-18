@@ -6,6 +6,9 @@ import Generic.Generic_Class;
 import Generic.Generic_Collection;
 import Generic.Masks;
 import IO.*;
+import List.ArrayList;
+import List.MyArrayList;
+import List.MyArrayListAdd;
 import Multithreading.Example1.Example1.ThreadStart;
 import Multithreading.Example1.Example3.Chiken;
 import Multithreading.Example1.Example3.Egg;
@@ -108,6 +111,18 @@ public class Main {
          Program program = new Program(num);
          program.ProgramSet();
 
+         Integer it =  System.in.read();
+
+         Integer elementlist=  System.in.read();
+
+         ArrayList arrayList = new ArrayList();
+         arrayList.arrayListSample(num, it);
+
+         MyArrayListAdd myArrayListAdd = new MyArrayListAdd();
+         for(int i=0; i<5; i++)
+         {
+           myArrayListAdd.MyListAdd(elementlist);
+         }
 
 
         } catch (IOException e) {

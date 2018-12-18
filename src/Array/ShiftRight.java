@@ -7,14 +7,14 @@ public class ShiftRight {
     {
         int k=3;
         for(int j =0; j<k; j++)
+    {
+        int temp = array[ array.length - 1];
+        for(int i=array.length - 1; i>0; i--)
         {
-            int temp = array[ array.length - 1];
-            for(int i=array.length - 1; i>0; i--)
-            {
-                array[i] = array[i-1];
-            }
-            array[0] = temp;
+            array[i] = array[i-1];
         }
+        array[0] = temp;
+    }
 
         int newArr[] = new int[array.length];
         for (int i = 0; i< array.length; i++){
