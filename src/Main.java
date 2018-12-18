@@ -120,9 +120,7 @@ public class Main {
 
          MyArrayListAdd myArrayListAdd = new MyArrayListAdd();
          for(int i=0; i<5; i++)
-         {
-           myArrayListAdd.MyListAdd(elementlist);
-         }
+          myArrayListAdd.MyListAdd(elementlist);
 
 
         } catch (IOException e) {
