@@ -2,6 +2,7 @@ import Array.*;
 import Array.ArraySum;
 import Array.NonRepetible;
 import Array.SwapPosition;
+import Cycles.*;
 import Generic.Generic_Class;
 import Generic.Generic_Collection;
 import Generic.Masks;
@@ -100,13 +101,13 @@ public class Main {
             threadStart.run();
 
 
-            Egg egg = new Egg(num);
+           /* Egg egg = new Egg(num);
             Chiken chiken = new Chiken(num);
 
 
             System.out.println("Спор начат");
             egg.start();
-            chiken.start();
+            chiken.start();*/
 
          Program program = new Program(num);
          program.ProgramSet();
@@ -121,6 +122,38 @@ public class Main {
          MyArrayListAdd myArrayListAdd = new MyArrayListAdd();
          for(int i=0; i<5; i++)
           myArrayListAdd.MyListAdd(elementlist);
+
+
+         BreakSample breakSample = new BreakSample();
+         breakSample.breakSample();
+
+         ContinueRunner continueRunner = new ContinueRunner();
+         continueRunner.setRunner(num);
+
+         DoWhileRunner doWhileRunner = new DoWhileRunner();
+         doWhileRunner.doWhileRunner(num);
+
+         Embedded embedded = new Embedded();
+         embedded.doEmbedded(num, elem);
+
+         FirstTask firstTask = new FirstTask();
+         firstTask.Task(num);
+
+
+         ForRunner forRunner = new ForRunner();
+         forRunner.Runner();
+
+
+         SecondTask secondTask = new SecondTask();
+         secondTask.Task(num);
+
+
+         Tab_task tab_task = new Tab_task();
+         tab_task.tab_task(num);
+         TherdTask therdTask = new TherdTask();
+         therdTask.Task(num);
+
+
 
 
         } catch (IOException e) {
