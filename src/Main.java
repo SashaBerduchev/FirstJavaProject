@@ -154,6 +154,12 @@ public class Main {
          therdTask.Task(num);
 
 
+         Integer arrayLength;
+         System.out.println("Enter of massiv length");
+         arrayLength = System.in.read();
+         ArrayOne arrayOne = new ArrayOne();
+         arrayOne.setArray(arrayLength);
+
 
 
         } catch (IOException e) {
