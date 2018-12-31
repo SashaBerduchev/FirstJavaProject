@@ -10,8 +10,8 @@ public class ArrayList {
         List<Integer> arrayList = new java.util.ArrayList<>();
         arrayList.add(num);
 
-        System.out.println(arrayList.get(it));
-        arrayList.remove(it);
+       // System.out.println(arrayList.get(it));
+        //arrayList.remove(it);
         System.out.println(arrayList.size());
 
         Iterator<Integer> ii = arrayList.iterator();

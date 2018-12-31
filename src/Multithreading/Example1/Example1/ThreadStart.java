@@ -34,5 +34,6 @@ public class ThreadStart extends Thread {
             System.out.println(arr[i]);
         }
 
+
     }
 }

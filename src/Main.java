@@ -162,6 +162,11 @@ public class Main {
 
 
 
+         ExaptionList exaptionList = new ExaptionList();
+         exaptionList.setExaption();
+
+         exaptionList.setNewExaption();
+
         } catch (IOException e) {
             e.printStackTrace();
         } catch (Exception e) {
