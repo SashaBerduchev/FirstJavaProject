@@ -10,6 +10,7 @@ import IO.*;
 import List.ArrayList;
 import List.MyArrayList;
 import List.MyArrayListAdd;
+import MatrixWork.Matrix;
 import Multithreading.Example1.Example1.ThreadStart;
 import Multithreading.Example1.Example3.Chiken;
 import Multithreading.Example1.Example3.Egg;
@@ -166,6 +167,15 @@ public class Main {
          exaptionList.setExaption();
 
          exaptionList.setNewExaption();
+
+         System.out.println("Wwesti column");
+         Integer column = System.in.read();
+         System.out.println("Wwesti column");
+         Integer row = System.in.read();
+
+         Matrix matrix = new Matrix(column, row);
+         matrix.AddMatrix();
+
 
         } catch (IOException e) {
             e.printStackTrace();
