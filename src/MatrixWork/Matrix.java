@@ -37,7 +37,15 @@ public class Matrix {
             }
         }
 
-        MatrixStreamWrite write = new MatrixStreamWrite();
-        write.setMatrixStream(matrix.toString());
+
+        for(int i=0; i<matrix.length; i++)
+        {
+            for (int j=0; j<matrix[i].length; j++)
+            {
+                MatrixStreamWrite write = new MatrixStreamWrite();
+                write.setMatrixStream(matrix[i][j].toString());
+            }
+        }
+
     }
 }
