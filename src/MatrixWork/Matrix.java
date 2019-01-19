@@ -1,5 +1,7 @@
 package MatrixWork;
 
+import IO.IO_BufferedOutputStream;
+
 import java.util.Random;
 
 public class Matrix {
@@ -34,5 +36,8 @@ public class Matrix {
                 System.out.println(matrix[i][j]);
             }
         }
+
+        MatrixStreamWrite write = new MatrixStreamWrite();
+        write.setMatrixStream(matrix.toString());
     }
 }
