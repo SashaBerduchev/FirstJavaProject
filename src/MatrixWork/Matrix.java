@@ -33,8 +33,9 @@ public class Matrix {
         {
             for (int j=0; j<matrix[i].length; j++)
             {
-                System.out.println(matrix[i][j]);
+                System.out.print(matrix[i][j]);
             }
+            System.out.println();
         }
 
 
@@ -45,6 +46,7 @@ public class Matrix {
                 MatrixStreamWrite write = new MatrixStreamWrite();
                 write.setMatrixStream(matrix[i][j].toString());
             }
+
         }
 
     }
