@@ -180,7 +180,7 @@ public class Main {
          Matrix matrix = new Matrix(column, row);
          matrix.AddMatrix();
 
-         ThreadMatrix threadMatrix = new ThreadMatrix(row, column, number);
+         ThreadMatrix threadMatrix = new ThreadMatrix(500, 500, 1000);
          threadMatrix.run();
 
 
