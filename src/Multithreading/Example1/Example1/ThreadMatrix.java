@@ -22,7 +22,7 @@ public class ThreadMatrix extends Thread {
         }
     }
 
-    void threadMatrix()
+   private void threadMatrix()
     {
         Matrix matrix = new Matrix(column, row);
         matrix.AddMatrix();

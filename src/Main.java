@@ -25,7 +25,7 @@ public class Main {
     public static void main(String[] args) {
 
         try {
-           Integer num = System.in.read();
+         Integer num = System.in.read();
             Array array = new Array(num);
 
 
@@ -94,19 +94,8 @@ public class Main {
             DeSerializable deSerializable = new DeSerializable();
             deSerializable.deSerializable();
 
-
-            System.out.println("Write weriable");
-            Double pointer = (double)( System.in.read());
-            System.out.println("Write weriable");
-            Integer numb =  System.in.read();
-            ThreadStart threadStart = new ThreadStart(pointer, numb);
-            threadStart.run();
-
-
            /* Egg egg = new Egg(num);
             Chiken chiken = new Chiken(num);
-
-
             System.out.println("Спор начат");
             egg.start();
             chiken.start();*/
@@ -174,15 +163,16 @@ public class Main {
          System.out.println("Wwesti column");
          Integer row = System.in.read();
          System.out.println("Wwesti number");
-         Integer number = System.in.read();
-
 
          Matrix matrix = new Matrix(column, row);
          matrix.AddMatrix();
 
-         ThreadMatrix threadMatrix = new ThreadMatrix(500, 500, 1000);
-         threadMatrix.run();
-
+         System.out.println("Write weriable");
+         Integer pointerr = System.in.read();
+         System.out.println("Write weriable");
+         Integer number =  System.in.read();
+         System.out.println("STARTING");
+         threadStarting(pointerr, number);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -190,4 +180,14 @@ public class Main {
             e.printStackTrace();
         }
     }
+
+ private static void threadStarting(Integer pointer, Integer numb) {
+     for (int i=0; i<pointer; i++){
+       System.out.println("THREAD START");
+       ThreadStart threadStart = new ThreadStart(pointer, numb);
+       threadStart.run();
+       ThreadMatrix threadMatrix = new ThreadMatrix(pointer, pointer, pointer);
+       threadMatrix.run();
+     }
+ }
 }

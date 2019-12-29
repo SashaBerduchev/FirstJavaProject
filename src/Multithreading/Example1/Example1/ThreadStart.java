@@ -3,26 +3,34 @@ package Multithreading.Example1.Example1;
 import Array.Array;
 
 import java.security.interfaces.DSAPublicKey;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Vector;
 
 public class ThreadStart extends Thread {
 
-    Double numpoint;
+    Integer numpoint;
     Integer number;
 
-    public ThreadStart(Double num, Integer numb){numpoint = num; number = numb; }
+    public ThreadStart(Integer num, Integer numb){numpoint = num; number = numb; }
     public void run()
     {
+        Thread[] array = new Thread[numpoint];
         for (int i=0; i<numpoint; i++)
         {
             Thread thread = new Thread(this::someThread);  //Thread thread = new Thread(GetPhones);
-            thread.run();
-            System.out.println("Thread stop");
+            System.out.println("Thread RUN");
+            array[i] = thread;
         }
 
+        for(int i = 0; i < array.length; i++)
+        {
+            array[i].start();
+        }
     }
 
 
-    void someThread()
+    private void someThread()
     {
         Integer[] arr;
         Array array = new Array(number);
@@ -31,7 +39,7 @@ public class ThreadStart extends Thread {
 
         for (int i = 0; i<arr.length; i++)
         {
-            System.out.println(arr[i]);
+            System.out.println(arr[i] + ' ');
         }
 
 
