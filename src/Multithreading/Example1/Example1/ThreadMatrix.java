@@ -24,8 +24,10 @@ public class ThreadMatrix extends Thread {
 
    private void threadMatrix()
     {
-        Matrix matrix = new Matrix(column, row);
-        matrix.AddMatrix();
+        for (int i=0; i<number; i++) {
+            Matrix matrix = new Matrix(column, row);
+            matrix.AddMatrix();
+        }
     }
 
 

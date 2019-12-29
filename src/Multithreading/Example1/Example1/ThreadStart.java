@@ -32,16 +32,15 @@ public class ThreadStart extends Thread {
 
     private void someThread()
     {
-        Integer[] arr;
-        Array array = new Array(number);
-        arr = array.AddArray();
-        System.out.println(arr.toString());
+        for (int j=0; j<number; j++) {
+            Integer[] arr;
+            Array array = new Array(number);
+            arr = array.AddArray();
+            System.out.println(arr.toString());
 
-        for (int i = 0; i<arr.length; i++)
-        {
-            System.out.println(arr[i] + ' ');
+            for (int i = 0; i < arr.length; i++) {
+                System.out.println(arr[i] + ' ');
+            }
         }
-
-
     }
 }
