@@ -3,7 +3,7 @@ package Generic;
 public class Generic_Class {
     public void SetGeneric()
     {
-        BoxPainter<Integer> valueInt = new BoxPainter<>(new Integer(10));
+        BoxPainter<Integer> valueInt = new BoxPainter<>( 10);
         System.out.println(valueInt);
         Integer valueInt2 = valueInt.getValue();
         BoxPainter<String> value2 = new BoxPainter<>("hello world");
