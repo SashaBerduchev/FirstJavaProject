@@ -14,11 +14,17 @@ public class ThreadMatrix extends Thread {
 
     public void run()
     {
+        Thread[] threads = new Thread[this.number];
         for (int i=0; i<number; i++)
         {
             Thread matrixthread = new Thread(this::threadMatrix);
-            matrixthread.run();
-            System.out.println("Thread of matrix stop");
+            threads[i] = matrixthread;
+            System.out.println("Thread of matrix run");
+        }
+
+        for (int j=0; j < threads.length; j++){
+            threads[j].start();
+            System.out.println("START");
         }
     }
 
