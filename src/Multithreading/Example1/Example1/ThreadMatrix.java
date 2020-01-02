@@ -35,8 +35,4 @@ public class ThreadMatrix extends Thread {
             matrix.AddMatrix();
         }
     }
-
-
-
-
 }
