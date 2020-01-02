@@ -8,7 +8,7 @@ public class Program {
     {
         CommonResource commonResource = new CommonResource();
         for (int i=1; i<numpoint; i++) {
-            Thread t = new Thread(new CountThread(commonResource));
+            Thread t = new Thread(new CountThread(commonResource, numpoint));
             t.start();
         }
     }
@@ -21,10 +21,11 @@ class CommonResource{
 
 class CountThread implements Runnable{
     CommonResource res;
-    CountThread(CommonResource res) {this.res = res;}
+    Integer count;
+    CountThread(CommonResource res, Integer numpoint) {this.res = res; count = numpoint;}
     public void run(){
         res.x = 1;
-        for(int i = 1; i < 5; i++)
+        for(int i = 1; i < count; i++)
         {
             System.out.println(Thread.currentThread().getName() + " " + res.x);
             res.x++;
