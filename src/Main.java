@@ -183,12 +183,14 @@ public class Main {
 
  private static void threadStarting(Integer pointer, Integer numb) {
 
-        for (int i=0; i<pointer; i++){
-            System.out.println("THREAD START");
-            ThreadStart threadStart = new ThreadStart(pointer, numb);
-            threadStart.run();
-            ThreadMatrix threadMatrix = new ThreadMatrix(pointer, pointer, pointer);
-            threadMatrix.run();
-        }
- }
+     for (int j=0; j<pointer; j++){
+             for (int i = 0; i < pointer; i++) {
+                 System.out.println("THREAD START");
+                 ThreadStart threadStart = new ThreadStart(pointer, numb);
+                 threadStart.run();
+                 ThreadMatrix threadMatrix = new ThreadMatrix(pointer, pointer, pointer);
+                 threadMatrix.run();
+             }
+         }
+     }
 }
