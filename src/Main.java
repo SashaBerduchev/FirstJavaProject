@@ -25,7 +25,23 @@ public class Main {
     public static void main(String[] args) {
 
         try {
-         Integer num = System.in.read();
+
+            System.out.println("Wwesti column");
+            Integer column = System.in.read();
+            Integer row = column;
+            System.out.println(column);
+            System.out.println("START");
+            Matrix matrix = new Matrix(column, row);
+            matrix.AddThread();
+
+            System.out.println("Write weriable");
+            Integer pointerr = System.in.read();
+            System.out.println("Write weriable");
+            Integer number =  System.in.read();
+            System.out.println("STARTING");
+            threadStarting(pointerr, number);
+
+            Integer num = System.in.read();
             Array array = new Array(num);
 
 
@@ -158,21 +174,7 @@ public class Main {
 
          exaptionList.setNewExaption();
 
-         System.out.println("Wwesti column");
-         Integer column = System.in.read();
-         System.out.println("Wwesti column");
-         Integer row = System.in.read();
-         System.out.println("Wwesti number");
 
-         Matrix matrix = new Matrix(column, row);
-         matrix.AddMatrix();
-
-         System.out.println("Write weriable");
-         Integer pointerr = System.in.read();
-         System.out.println("Write weriable");
-         Integer number =  System.in.read();
-         System.out.println("STARTING");
-         threadStarting(pointerr, number);
 
         } catch (IOException e) {
             e.printStackTrace();
